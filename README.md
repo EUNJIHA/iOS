@@ -1,2 +1,2 @@
 # iOS
-iOS Study
+iOS 이모저모
