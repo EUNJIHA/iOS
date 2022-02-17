@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		049240CA27BCD30C00E2D6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049240C927BCD30C00E2D6B0 /* AppDelegate.swift */; };
 		049240CC27BCD30C00E2D6B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049240CB27BCD30C00E2D6B0 /* SceneDelegate.swift */; };
-		049240CE27BCD30C00E2D6B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049240CD27BCD30C00E2D6B0 /* ViewController.swift */; };
-		049240D127BCD30C00E2D6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049240CF27BCD30C00E2D6B0 /* Main.storyboard */; };
 		049240D327BCD30E00E2D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049240D227BCD30E00E2D6B0 /* Assets.xcassets */; };
 		049240D627BCD30E00E2D6B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049240D427BCD30E00E2D6B0 /* LaunchScreen.storyboard */; };
+		0492410027BE337A00E2D6B0 /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049240FF27BE337A00E2D6B0 /* RepositoryListViewController.swift */; };
+		0492410427BE34CB00E2D6B0 /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492410327BE34CA00E2D6B0 /* RepositoryListCell.swift */; };
 		49218726BEC72D67603B5189 /* Pods_GithubRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575E1A659652DEFF93D54BFC /* Pods_GithubRepository.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +20,11 @@
 		049240C627BCD30C00E2D6B0 /* GithubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049240C927BCD30C00E2D6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049240CB27BCD30C00E2D6B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		049240CD27BCD30C00E2D6B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		049240D027BCD30C00E2D6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		049240D227BCD30E00E2D6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049240D527BCD30E00E2D6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049240D727BCD30E00E2D6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049240FF27BE337A00E2D6B0 /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		0492410327BE34CA00E2D6B0 /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
 		575E1A659652DEFF93D54BFC /* Pods_GithubRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E895B2564052E4BD90C6BB /* Pods-GithubRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepository.release.xcconfig"; path = "Target Support Files/Pods-GithubRepository/Pods-GithubRepository.release.xcconfig"; sourceTree = "<group>"; };
 		F8F0834D89F6AFF7670B9F5E /* Pods-GithubRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepository.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepository/Pods-GithubRepository.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +65,11 @@
 			children = (
 				049240C927BCD30C00E2D6B0 /* AppDelegate.swift */,
 				049240CB27BCD30C00E2D6B0 /* SceneDelegate.swift */,
-				049240CD27BCD30C00E2D6B0 /* ViewController.swift */,
-				049240CF27BCD30C00E2D6B0 /* Main.storyboard */,
 				049240D227BCD30E00E2D6B0 /* Assets.xcassets */,
 				049240D427BCD30E00E2D6B0 /* LaunchScreen.storyboard */,
 				049240D727BCD30E00E2D6B0 /* Info.plist */,
+				049240FF27BE337A00E2D6B0 /* RepositoryListViewController.swift */,
+				0492410327BE34CA00E2D6B0 /* RepositoryListCell.swift */,
 			);
 			path = GithubRepository;
 			sourceTree = "<group>";
@@ -88,7 +88,6 @@
 				F8F0834D89F6AFF7670B9F5E /* Pods-GithubRepository.debug.xcconfig */,
 				98E895B2564052E4BD90C6BB /* Pods-GithubRepository.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -154,7 +153,6 @@
 			files = (
 				049240D627BCD30E00E2D6B0 /* LaunchScreen.storyboard in Resources */,
 				049240D327BCD30E00E2D6B0 /* Assets.xcassets in Resources */,
-				049240D127BCD30C00E2D6B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049240CE27BCD30C00E2D6B0 /* ViewController.swift in Sources */,
 				049240CA27BCD30C00E2D6B0 /* AppDelegate.swift in Sources */,
 				049240CC27BCD30C00E2D6B0 /* SceneDelegate.swift in Sources */,
+				0492410027BE337A00E2D6B0 /* RepositoryListViewController.swift in Sources */,
+				0492410427BE34CB00E2D6B0 /* RepositoryListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		049240CF27BCD30C00E2D6B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				049240D027BCD30C00E2D6B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		049240D427BCD30E00E2D6B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
