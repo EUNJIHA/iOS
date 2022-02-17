@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-// MARK: Basic
+// MARK: - Basic
 print("------Just------")
 Observable<Int>.just(1)
     .subscribe(onNext: {
@@ -21,7 +21,7 @@ Observable<Int>.from([1, 2, 3, 4, 5]) // only Array
     })
 
 
-// MARK: subscribe
+// MARK: - subscribe
 print("------subscribe------")
 Observable<Int>.of(1, 2, 3, 4, 5)
     .subscribe {
@@ -43,7 +43,7 @@ Observable<Int>.of(1, 2, 3, 4, 5)
         print($0)
     })
 
-// MARK: else
+// MARK: - else
 print("------empty------") // 즉시 종료할 수 있는 Observable을 Return 하고 싶을 때, 의도적으로 0개의 값을 가지는 Observable을 Return 하고 싶을 때
 Observable<Void>.empty()
     .subscribe{
@@ -86,6 +86,59 @@ Observable.of(1, 2, 3)
 // 실수로 dispose를 안해주거나 등.. 메모리 누수 일어날 수 있겠지
 // Observable - subscribe - dispose -> 하나의 단위라고 알아두기
 
-// MARK: Observable을 만드는 새로운 형태 
+
+enum MyError: Error {
+    case anError
+}
+
+// MARK: - Observable을 만드는 새로운 형태
+print("------create------")
+Observable<Int>.create { observer -> Disposable in
+    
+    observer.onNext(1)
+    observer.onError(MyError.anError)
+    observer.onCompleted()
+    observer.on(.next(2)) // 위의 .onNext(1)와 같은 내용 다른 형식
+    return Disposables.create()
+}
+.subscribe(onNext: {
+    print($0)
+}, onError: {
+    print($0.localizedDescription)
+}, onCompleted: {
+    print("completed")
+}, onDisposed: {
+    print("disposed")
+})
+.disposed(by: disposeBag)
 
 
+print("------deferred------")
+Observable.deferred {
+    Observable.of(1, 2, 3)
+}
+.subscribe(onNext: {
+    print($0)
+})
+.disposed(by: disposeBag)
+
+print("------deferred 사례------")
+
+var isLike: Bool = false
+
+let factory: Observable<String> = Observable.deferred {
+    isLike = !isLike
+    
+    if isLike {
+        return Observable.of("❤️")
+    } else {
+        return Observable.of("💔")
+    }
+}
+
+for _ in 0...3 {
+    factory.subscribe(onNext: {
+        print($0)
+    })
+        .disposed(by: disposeBag)
+}
