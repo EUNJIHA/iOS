@@ -70,12 +70,12 @@ class RepositoryListCell: UITableViewCell {
         
         starLabel.snp.makeConstraints{
             $0.centerY.equalTo(starImageView)
-            $0.leading.equalTo(starImageView.snp.trailing).inset(5)
+            $0.leading.equalTo(starImageView.snp.trailing).offset(5)
         }
         
         languageLabel.snp.makeConstraints{
             $0.centerY.equalTo(starLabel)
-            $0.leading.equalTo(starLabel.snp.trailing).inset(12)
+            $0.leading.equalTo(starLabel.snp.trailing).offset(12)
         }
     }
 }

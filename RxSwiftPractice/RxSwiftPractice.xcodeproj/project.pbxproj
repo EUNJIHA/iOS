@@ -17,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040888AF27C3B03700075AF7 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		042D803227C89BFD00C2EB9E /* TransformingOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		049240E627BCD70200E2D6B0 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049240E927BCD70200E2D6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049240EB27BCD70200E2D6B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				049240FE27BCD7B000E2D6B0 /* Observable.playground */,
+				040888AF27C3B03700075AF7 /* Traits.playground */,
+				042D803227C89BFD00C2EB9E /* TransformingOperators.playground */,
 				049240E827BCD70200E2D6B0 /* RxSwiftPractice */,
 				049240E727BCD70200E2D6B0 /* Products */,
 				AD1F7D162B2A85CA450120AB /* Pods */,
